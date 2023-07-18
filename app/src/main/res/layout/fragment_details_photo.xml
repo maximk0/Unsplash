@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipeRefresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.DetailsPhotoFragment">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/photo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/photo"
+                tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutInfo"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignBottom="@+id/photo"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/backgroundAlpha">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/avatarCV"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="6dp"
+                    app:cardCornerRadius="250dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/avatar"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="@string/avatar"
+                        android:scaleType="centerCrop" />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/username"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="6dp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@id/nickname"
+                    app:layout_constraintEnd_toStartOf="@+id/likesCountTextView"
+                    app:layout_constraintHorizontal_bias="0.022"
+                    app:layout_constraintStart_toEndOf="@id/avatarCV"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/nickname"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="6dp"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@id/avatarCV"
+                    app:layout_constraintEnd_toStartOf="@+id/likesCountTextView"
+                    app:layout_constraintHorizontal_bias="0.016"
+                    app:layout_constraintStart_toEndOf="@id/avatarCV"
+                    app:layout_constraintTop_toBottomOf="@id/username" />
+
+                <ImageButton
+                    android:id="@+id/likeImageView"
+                    android:layout_width="48dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@android:color/transparent"
+                    android:contentDescription="@string/like"
+                    android:src="@drawable/ic_unlike"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/likesCountTextView"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/likesCountTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/downloads"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/likeImageView"
+                    app:layout_constraintStart_toEndOf="@id/username"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageButton
+            android:id="@+id/locationIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/photo"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="8dp"
+            android:backgroundTint="@android:color/transparent"
+            android:contentDescription="@string/description_icon_location"
+            android:src="@drawable/ic_location" />
+
+            <TextView
+                android:id="@+id/locationTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/photo"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="15dp"
+                android:layout_toEndOf="@+id/locationIcon"
+                android:clickable="true"
+                android:focusable="true"
+                android:hapticFeedbackEnabled="false" />
+
+            <TextView
+                android:id="@+id/tags"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/locationIcon"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="8dp" />
+
+            <LinearLayout
+                android:id="@+id/exif"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tags"
+                android:layout_alignStart="@+id/locationIcon"
+                android:gravity="start"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/made_with"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/made_with" />
+
+                <TextView
+                    android:id="@+id/model"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/model" />
+
+                <TextView
+                    android:id="@+id/exposure"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/exposure" />
+
+                <TextView
+                    android:id="@+id/aperture"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/aperture" />
+
+                <TextView
+                    android:id="@+id/focal_length"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="@string/focal_length" />
+
+                <TextView
+                    android:id="@+id/iso"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/iso" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/about"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tags"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="8dp"
+                android:layout_toEndOf="@+id/exif"
+                android:gravity="start"
+                android:text="@string/about" />
+
+            <LinearLayout
+                android:id="@+id/downloads_block"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/about"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="8dp"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/download"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/download" />
+
+                <TextView
+                    android:id="@+id/downloads_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/downloads" />
+
+                <ImageView
+                    android:id="@+id/downloadBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/download_icon"
+                    android:src="@drawable/ic_download" />
+
+            </LinearLayout>
+
+    </RelativeLayout>
+
+</ScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

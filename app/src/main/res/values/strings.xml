@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name" translatable="false">Unsplash</string>
+    <string name="title_home">Feed</string>
+    <string name="title_details">Photo</string>
+    <string name="title_collections">Collections</string>
+    <string name="title_profile">Profile</string>
+    <string name="welcome">Welcome to Unsplash!</string>
+    <string name="start">Start</string>
+    <string name="text_for_onboardin1"> Make photo, publish, gather an audience, get feedback!</string>
+    <string name="text_for_onboardin2">Share with friends, make collections</string>
+    <string name="text_for_onboardin3">Upload your favorite pictures and track statistics</string>
+    <string name="skip">Skip</string>
+    <string name="next">Next</string>
+    <string name="ok">Ok</string>
+    <string name="back">Back</string>
+    <string name="authorized_text">Log in with Unsplash</string>
+    <string name="auth_failed">Authorization is failed</string>
+    <string name="error_text">Error loading</string>
+    <string name="avatar">User\'s avatar</string>
+    <string name="photo">Photo</string>
+    <string name="like">Like</string>
+    <string name="no_connection">No connection. Photos loading from cache.</string>
+    <string name="retry">Retry</string>
+    <string name="search">Search</string>
+
+    <string name="made_with">Made with: %s</string>
+    <string name="model">Model: %s</string>
+    <string name="exposure">Exposure: %s</string>
+    <string name="aperture">Aperture: %s</string>
+    <string name="focal_length">Focal length: %s</string>
+    <string name="iso" translatable="false">ISO: %s</string>
+    <string name="about">Bio %s: %s</string>
+    <string name="download">Download </string>
+    <string name="download_icon">download icon</string>
+    <string name="downloads">" (%d)"</string>
+    <string name="description_icon_location">Icon location</string>
+    <string name="permission_granted">Permission granted</string>
+    <string name="image_saved">"Picture save "</string>
+    <string name="image_not_saved">Picture not saved</string>
+    <string name="open_picture">Open</string>
+    <string name="share">Share</string>
+    <string name="count_of_photos">%d photos</string>
+    <string name="description_icon_email">Icon email</string>
+    <string name="you_liked">You liked (%d)</string>
+    <string name="logout">Logout</string>
+    <string name="get_user_error">Get user error</string>
+    <string name="start_to_save_image">Start to save image</string>
+    <string name="permission_not_granted">Permission denied</string>
+    <string name="download_completed">Download completed</string>
+    <string name="title_photos_in_collection">Collection`s photos</string>
+
+</resources>
+
+
+
