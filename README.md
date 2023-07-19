@@ -1,5 +1,5 @@
 # Unsplash
-Photos from unsplash api
+Photos from  Unsplash API. Users can authorize and view their favorite photos. 
 
 ## Built With
 1. Kotlin
