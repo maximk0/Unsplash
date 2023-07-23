@@ -69,7 +69,6 @@ class ProfileFragment : Fragment() {
                 when (menuItem.itemId) {
                     R.id.action_logout -> {
                         profileViewModel.logout()
-                        toast("This is logout")
                         return true
                     }
                 }
@@ -92,7 +91,7 @@ class ProfileFragment : Fragment() {
                         nickname.text = user?.username
                         bio.text = user?.bio
                         textLocation.text = user?.location ?: "N/A"
-                        textEmail.text = "@${user?.email}"
+                        textEmail.text = user?.email
                         textDownloads.text = user?.downloads.toString()
                         textFavorite.text = getString(R.string.you_liked, user?.totalLikes)
                         recyclerview.adapter = likedPhotosAdapter
