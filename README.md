@@ -16,4 +16,13 @@ Photos from  Unsplash API. Users can authorize and view their favorite photos.
 12. OAuth
 
 ## Preview
-
+### Authorization
+<img src="authorize.png" width="250" />
+Main screen
+<img src="home.png" width="250" />
+Collections
+<img src="collections.png" width="250" />
+Onboarding
+<img src="onboarding.png" width="250" />
+<img src="Screenshot_1690140836.png" width="250" />
+<img src="Screenshot_1690140839.png" width="250" />
