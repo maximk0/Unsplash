@@ -16,4 +16,4 @@ An application for the popular photo service Unsplash. Allows you to view photos
 12. OAuth
 
 ## Preview
-<img src="home.png" width="250" /> <img src="collections.png" width="250" />
+<img src="home.png" width="250" /> <img src="collections.png" width="250" /> <img src="profile.png" width="250" /> <img src="detail_photo.png" width="250" />
